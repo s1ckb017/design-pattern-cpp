@@ -1,0 +1,32 @@
+Command è un design pattern comportamentale, permette di isolare la porzione di codice
+che effettua un'azione (eventualmente molto complessa) dal codice che ne richiede l'esecuzione;
+l'azione è incapsulata nell'oggetto Command.
+
+Un client tramite command esegue azioni su altri oggetti.
+
+
+
+Command (ICommand)
+    Definisce l’interfaccia di riferimento per ogni comando.
+
+ConcreteCommand (Open, Read, Write e Close)
+    Definisce un legame tra il Receiver e un’azione. Implementa in modo particolare il metodo Execute()
+    invocando i metodi del Receiver.
+
+Invoker  (Reader e Writer)
+    Aggrega i diversi comandi e delega a loro l’esecuzione delle azioni previste.
+
+Receiver  (System.Console)
+    Conosce il modo di eseguire le operazioni associate ad una particolare richiesta.
+
+Client (Program)
+    Tramite l’Invoker attiva ed esegue un ConcreteCommand che va a interessare il Receiver corrispondente.
+
+
+- command è l'interfaccia che usa productlist per effettuare azioni sugli oggetti nel vettore
+- buyObj è un oggetto che incapsula l'oggetto sul quale esegue l'operazione di compera, implementa command
+- sellObj lo stesso.
+- productList contiene un vettore di command ed definisce le operazioni di aggiunta di oggetti e di esecuzione
+    del metodo execute su ogni oggetto, il metodo execute è implementato in sellObj e buyObj
+- obj è l'oggetto sul quale effettuiamo azioni( buy, sell ) e definisce buy e sell.
+- il main tramite productlist gestisce gli oggetti.

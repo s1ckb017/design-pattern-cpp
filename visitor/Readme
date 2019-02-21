@@ -1,0 +1,34 @@
+Il design pattern visitor viene usato quando abbiamo un oggetto(objStructure) che contiene
+più oggetti eterogenei e su ogni nodo di objStructure vogliamo eseguire determinate operazioni
+che ovviamente saranno diverse tra un nodo e l'altro nodo. Ovviamente non si vuole nè implementare
+le operazioni nell'oggetto objStructure nè appesantire gli oggetti nodo con delle operazioni. Ma
+si vuole che un client faccia tutte le operazioni sui nodi senza sapere della struttura interna dei nodi.
+
+
+
+Visitor:
+Visitor dichiara un metodo visit per ogni ConcreteElement appartenente alla struttura di oggetti,
+in modo che ogni oggetto della struttura possa invocare il metodo visit appropriato
+passando un riferimento a sé (this) come parametro.
+Questo permette al Visitor di identificare la classe che ha chiamato il metodo visit,
+eseguire il comportamento corrispondente e accedere all'oggetto attraverso la sua specifica interfaccia.
+
+ConcreteVisitor:
+ConcreteVisitor implementa le operazioni visit dichiarate da Visitor perché agiscano come desiderato
+sulle rispettive classi. Inoltre fornisce il contesto dell'algoritmo e ne mantiene in memoria lo stato,
+che spesso accumula i risultati parziali ottenuti durante l'attraversamento della struttura.
+
+Element:
+Element definisce un'operazione accept utilizzata per "accettare" un Visitor passato come parametro.
+
+ConcreteElement:
+ConcreteElement implementa la accept definita da Element.
+In generale accept chiama il metodo visit del Visitor ricevuto, passando
+come parametro un riferimento a sé.
+
+ObjectStructure:
+ObjectStructure contiene ed elenca gli elementi.
+Quando necessario può fornire un'interfaccia d'alto livello che permetta al Visitor
+di visitare i singoli Element.
+Può essere implementata applicando il pattern Composite,
+oppure utilizzando una collezione come ad esempio un array o qualsiasi altra struttura dati.

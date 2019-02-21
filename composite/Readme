@@ -1,0 +1,25 @@
+Composite è un design pattern strutturale.
+Si utilizza quando un client deve manipolare una collezione di oggetti in maniera
+uniforme.
+Gli oggetti da manipolare possono essere sia primitivi che composizioni di oggetti,
+quindi vi è della ricorsione in questo design pattern.
+Gli oggetti primitivi sono chiamati foglie, mentre quelli che sono composizioni
+di altri sono chiamati nodi.
+
+Pertanto composite permette di trattare strutture ad albero.
+
+Ovviamente i nodi possono essere anche differenti l'importante è che implementino
+l'interfaccia component.
+
+
+Client: manipola gli oggetti attraverso l'interfaccia Component.
+
+Component:  dichiara l'interfaccia per gli oggetti nella composizione,
+            per l'accesso e la manipolazione di questi, imposta un comportamento
+            di default per l'interfaccia comune a tutte le classi e può definire
+            un'interfaccia per l'accesso al padre del componente e la implementa se è appropriata.
+
+Composite:  definisce il comportamento per i componenti aventi figli,
+            salva i figli e implementa le operazioni ad essi connesse nell'interfaccia Component.
+
+Leaf: definisce il comportamento degli oggetti primitivi, cioè delle foglie.

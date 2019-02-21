@@ -1,0 +1,18 @@
+Decorator è un design pattern strutturale.
+Il suo scopo è di aggiungere funzionalità ad oggetti esistenti a run-time.
+Supponiamo di avere un programma con un interfaccia grafica dobbiamo permettere
+all'interfaccia grafica di cambiare toolbar(orizz, verticale, entrambe)
+a seconda di scelte dell'utente. Per fare ciò si utilizza decorator, che è una classe
+a cui viene passato l'oggetto da 'decorare'e quindi a seconda dell'oggetto passato
+viene fatta una determinata operazione.
+
+
+
+Component: definisce l'interfaccia dell'oggetto a cui verranno aggiunte nuove funzionalità.
+
+ConcreteComponent: definisce l'oggetto concreto al quale aggiungere le funzionalità.
+
+Decorator:  mantiene un riferimento all'oggetto Component e definisce un'interfaccia 
+           conforme all'interfaccia Component.
+
+ConcreteDecorator: aggiunge le funzionalità al Component.

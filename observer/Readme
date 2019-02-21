@@ -1,0 +1,2 @@
+Observer è un design pattern comportamentale.
+Un oggetto observer vuole essere notificato di un cambiamento di stato su di un oggetto.

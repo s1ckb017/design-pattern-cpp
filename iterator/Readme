@@ -1,0 +1,12 @@
+Il design pattern iterator ha lo scopo di permettere ad un client(in questo caso
+il containerForObjA) di attraversare la lista di oggetti che contiene appoggiandosi
+alla classe iterator.
+
+containerForObjA implementa una interfaccia 'container' per ritornare un iterator
+che attraversi una lista di objA.
+container definisce il prototipo (getIterator) il quale sarà implementato da ogni
+classe container concreta.
+
+iteratorForObjA implementa un interfaccia 'iterator' per attraversare una lista di objA.
+iterator definisce un interfaccia generale tramite l'uso di template che viene implementata
+da iteratori specifici tipo iteratorForObjA.

@@ -1,0 +1,12 @@
+Strategy è un design pattern comportamentale e viene utilizzato
+quando si ha una famiglia di algoritmi (ad esempio di ordinamento) e si vuole
+che il client utilizzi questi intercambiabilmente senza conoscere gli algoritmi
+come sono fatti internamente.
+
+Strategy: interfaccia per le famiglie di algoritmi
+
+ConcreteStrategy: classe concreta che implementa strategy e definisce un vero e proprio
+                  algoritmo
+
+Context: classe che usa oggetto strategy, quando la si chiama(context) bisogna dirli quale
+         algo bisogna che usi.

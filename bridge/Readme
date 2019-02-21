@@ -1,0 +1,11 @@
+Bridge è un design pattern strutturale, serve a decomporre interfaccia ed implementazione
+per permettere alle due di evolvere indipendentemente.
+
+
+
+- Implementor interfaccia che definisce i metodi da implementare
+- ConcreteImplementor implementa implementor
+- Abstraction interfaccia che contiene oggetto implementor definisce i metodi
+              che useranno implementor.
+
+- concreteAbstraction implementa i metodi di abstraction ed usa implementor. 
